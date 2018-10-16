@@ -1,3 +1,167 @@
-.list-group-item {
-  line-height: 2.5;
+.navbar {
+  background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+  position:absolute;
+    border-bottom: 2px solid rgb(213, 98, 248);
+    text-shadow: .9px 1px rgb(247, 245, 245);
+    box-shadow:
+    0 0 2px hsl(60, 3%, 21%), 
+    0 0 0 2px hsl(182, 91%, 64%),
+    0 0 0 4px hsl(194, 92%, 48%),
+    0 0 0 6px hsl(335, 85%, 55%),
+    0 0 0 8px hsl(14, 63%, 62%),
+    0 0 0 10px hsl(0, 81%, 62%),
+    0 0 0 14px  hsl(61, 94%, 48%);
+    height:10%;
 }
+
+.navbar-brand{
+  font-family: 'Poiret One', cursive;
+  font-size: 300%;
+}
+.navbar-text{
+    padding:10px;
+}
+
+#video-background {
+    /*  making the video fullscreen  */
+      position: fixed;
+      left:0;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      height: auto;
+      z-index: -90;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      overflow:hidden;
+      object-fit: cover;
+  }
+  
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    background:white;
+  }
+  
+  h1 {
+    padding:60px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 10vw;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-size: 120% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, 
+                      #7794ff, 
+                      #44107A,
+                      #FF1361,
+                      #FFF800);
+    animation: .8s shake infinite alternate; 
+  }
+  
+  @keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }   
+
+  h3, h4 {
+    padding:60px;
+    position: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 10vw;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-size: 120% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, 
+                      #7794ff, 
+                      #44107A,
+                      #FF1361,
+                      #FFF800);
+  }
+
+    .container {
+        padding:20px;
+        margin-bottom:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin: 0 auto;
+        min-height: 100vh;
+        position:flex;
+        
+      }
+
+      .btn {
+        flex: 1 1 auto;
+        margin: 10px;
+        padding: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+       /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+        box-shadow: 0 0 30px hsl(194, 92%, 48%);
+        border-radius: 05px;
+       }
+      
+      .btn:hover {
+        background-position: right center; /* change the direction of the change here */
+      }
+      
+      .btn-5 {
+        background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    }
+
+      .footer{ 
+        background-color: rgb(63, 63, 63);
+        box-shadow:
+        0 0 2px hsl(60, 3%, 21%), 
+        0 0 0 8px hsl(61, 94%, 48%),
+        0 0 4px hsl(60, 3%, 21%),
+        0 0 0 15px hsl(335, 85%, 55%),
+        0 0 4px hsl(60, 3%, 21%),
+        0 0 0 22px hsl(194, 92%, 48%),
+        0 0 4px hsl(60, 3%, 21%);
+    
+      }
