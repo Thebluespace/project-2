@@ -1,29 +1,31 @@
-.navbar {
-  background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
-  position:absolute;
-    border-bottom: 2px solid rgb(213, 98, 248);
-    text-shadow: .9px 1px rgb(247, 245, 245);
-    box-shadow:
-    0 0 2px hsl(60, 3%, 21%), 
-    0 0 0 2px hsl(182, 91%, 64%),
-    0 0 0 4px hsl(194, 92%, 48%),
-    0 0 0 6px hsl(335, 85%, 55%),
-    0 0 0 8px hsl(14, 63%, 62%),
-    0 0 0 10px hsl(0, 81%, 62%),
-    0 0 0 14px  hsl(61, 94%, 48%);
+.navbar {  
+    padding:1%;
     height:10%;
+    box-shadow: 0 0 30px hsl(192, 4%, 25%);
+    border-radius: 05px;
+    position:inline-block;
 }
 
 .navbar-brand{
-  font-family: 'Poiret One', cursive;
-  font-size: 300%;
-}
-.navbar-text{
-    padding:10px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 50px;
+  font-weight: 1000;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, 
+                      #7794ff, 
+                      #44107A,
+                      #FF1361,
+                      #FFF800);
 }
 
 #video-background {
-    /*  making the video fullscreen  */
       position: fixed;
       left:0;
       right: 0; 
@@ -38,8 +40,32 @@
       overflow:hidden;
       object-fit: cover;
   }
-  
 
+  .btn-2{
+    padding:10px;
+    height:100%;
+    width:10%;
+    flex: 1 1 auto;
+    font-size: 20x;
+    margin: -5px;
+    margin-top: -33px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 500% auto;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px hsl(180, 67%, 57%);
+    border-radius: 3px;
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    position: inline-flex;    
+  }
+
+  .btn-2:hover {
+    background-position: right center; /* change the direction of the change here */
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+
+  }
 
 html, body {
     height: 100%;
@@ -50,19 +76,20 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Source Code Pro', monospace;
     background:white;
   }
   
   h1 {
+    font-family: 'Bevan', cursive;
     padding:60px;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 6px;
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 900;
     text-decoration: none;
     color: white;
+    width: 100%;
     display: inline-block;
     background-size: 120% 100%;
     -webkit-background-clip: text;
@@ -79,7 +106,9 @@ html, body {
                       #FF1361,
                       #FFF800);
     animation: .8s shake infinite alternate; 
+    z-index: 2;
   }
+
   
   @keyframes shake {
     0% { transform: skewX(-15deg); }
@@ -88,34 +117,7 @@ html, body {
     15% { transform: skewX(15deg); }
     20% { transform: skewX(0deg); }
     100% { transform: skewX(0deg); }  
-  }   
-
-  h3, h4 {
-    padding:60px;
-    position: center;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    font-size: 10vw;
-    font-weight: 900;
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    background-size: 120% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -ms-background-clip: text;
-    -ms-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    background-image: linear-gradient(45deg, 
-                      #7794ff, 
-                      #44107A,
-                      #FF1361,
-                      #FFF800);
-  }
-
+  } 
     .container {
         padding:20px;
         margin-bottom:50px;
@@ -128,7 +130,6 @@ html, body {
         margin: 0 auto;
         min-height: 100vh;
         position:flex;
-        
       }
 
       .btn {
@@ -140,10 +141,22 @@ html, body {
         transition: 0.5s;
         background-size: 200% auto;
         color: white;
-       /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-        box-shadow: 0 0 30px hsl(194, 92%, 48%);
+        font-size:2vw;
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 0 30px hsl(194, 62%, 75%);
         border-radius: 05px;
+        z-index: 2;
+        display: inline-flex;
+        float:right;
+        animation: flash linear 1ms infinite;; 
        }
+
+       @-webkit-keyframes flash {
+        0% { opacity: 1; } 
+        25% { opacity: 1; } 
+        50% { opacity: .1; } 
+        100% { opacity: 1; }
+      }
       
       .btn:hover {
         background-position: right center; /* change the direction of the change here */
@@ -151,17 +164,8 @@ html, body {
       
       .btn-5 {
         background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+        animation: flash linear 1s infinite;; 
+
     }
 
-      .footer{ 
-        background-color: rgb(63, 63, 63);
-        box-shadow:
-        0 0 2px hsl(60, 3%, 21%), 
-        0 0 0 8px hsl(61, 94%, 48%),
-        0 0 4px hsl(60, 3%, 21%),
-        0 0 0 15px hsl(335, 85%, 55%),
-        0 0 4px hsl(60, 3%, 21%),
-        0 0 0 22px hsl(194, 92%, 48%),
-        0 0 4px hsl(60, 3%, 21%);
-    
-      }
+      
