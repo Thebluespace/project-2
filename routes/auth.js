@@ -4,27 +4,26 @@ var express = require('express');
 
 
 
-module.exports = function (router, passport) {
-
-    // //Host public
-    // router.use(express.static('public'));
-
-    router.get('/newUserForm', authController.newUserForm);
+module.exports = function (app, passport) {
 
 
-    router.get('/signin', authController.signin);
+
+    app.get('/newUserForm', authController.newUserForm);
 
 
-    router.post('/newUserForm', passport.authenticate('local-signup', {
+    app.get('/signin', authController.signin);
+
+
+    app.post('/newUserForm', passport.authenticate('local-signup', {
         successRedirect: '/choosedesign',
 
         failureRedirect: '/newUserForm'
     }
 
     ));
-    router.get('/choosedesign', isLoggedIn, authController.choosedesign);
+    app.get('/choosedesign', isLoggedIn, authController.choosedesign);
 
-    router.get('/logout', authController.logout);
+    app.get('/logout', authController.logout);
 
     function isLoggedIn(req, res, next) {
 
@@ -36,7 +35,7 @@ module.exports = function (router, passport) {
 
     }
 
-    router.post('/signin', passport.authenticate('local-signin', {
+    app.post('/signin', passport.authenticate('local-signin', {
         successRedirect: '/choosedesign',
 
         failureRedirect: '/signin'
