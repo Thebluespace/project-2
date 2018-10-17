@@ -11,9 +11,28 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+
+// Passport
+var passport   = require('passport')
+var session    = require('express-session')
+var bodyParser = require('body-parser')
+var env = require('dotenv').load();
+
+// For Passport
+ 
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+ 
+app.use(passport.initialize());
+ 
+app.use(passport.session()); // persistent login sessions
+
+
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+var authRoute = require('./routes/auth.js')(app,passport);
+//load passport strategies
+require('./config/passport/passport.js')(passport, models.user);
 
 var syncOptions = { force: false };
 
