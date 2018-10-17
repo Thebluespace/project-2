@@ -1,22 +1,24 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "exampledb",
-    "host": "localhost",
+    "username": "myzxbwaejprk9z6x",
+    "password": "lnypunre0ijkzrwx",
+    "database": "ekcnzx2os6trrscc",
+    "host": "u28rhuskh0x5paau.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "port": 8889
+    "port": "3306"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "testdb",
-    "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }

@@ -1,26 +1,13 @@
-var db = require("../models");
-var express = require("express");
 var authController = require('../controllers/authcontroller.js');
-module.exports = function(app, passport) {
-  app.post("/api/newUser", (req,res) => {
-    try {
-      var data = req.body;
-      //orm.newUser(data); // need orm setup
-    } catch (error) {
-      console.log(error);
-      res.send(error.message);
-    }
-  });
-  
-  app.get("/api/examples",(req,res) => {
-    try {
-      var data = orm.getExamples();
-      res.json(data);
-    } catch (error) {
-      console.log(error);
-      res.send(error.message);
-    }
-  });
+
+var express = require('express');
+
+
+
+module.exports = function (app, passport) {
+
+
+
     app.get('/newUserForm', authController.newUserForm);
 
 
@@ -31,7 +18,9 @@ module.exports = function(app, passport) {
         successRedirect: '/choosedesign',
 
         failureRedirect: '/newUserForm'
-    }));
+    }
+
+    ));
     app.get('/choosedesign', isLoggedIn, authController.choosedesign);
 
     app.get('/logout', authController.logout);
@@ -44,10 +33,13 @@ module.exports = function(app, passport) {
 
         res.redirect('/signin');
 
-    };
+    }
+
     app.post('/signin', passport.authenticate('local-signin', {
         successRedirect: '/choosedesign',
 
         failureRedirect: '/signin'
-    }));
-};
+    }
+
+    ));
+}
