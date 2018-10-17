@@ -1,4 +1,3 @@
-require("dotenv").config();
 var express = require("express");
 
 var db = require("./models");
@@ -12,8 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.use(require("./routes/apiRoutes"));
 
 var syncOptions = { force: false };
 
