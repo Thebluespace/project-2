@@ -20,6 +20,9 @@ module.exports = function(sequelize, DataTypes) {
       website: {
           type: DataTypes.STRING
       },
+      quote: {
+        type: DataTypes.TEXT
+      }
 
     });
   
