@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
     CardInfo.associate = function(models) {
       // We're saying that  CardInfo should belong to a User
       // CardInfo can't be created without a User due to the foreign key constraint
-      CardInfo.belongsTo(models.users, {
+      CardInfo.belongsTo(models.user, {
         foreignKey: {
           allowNull: false
         }

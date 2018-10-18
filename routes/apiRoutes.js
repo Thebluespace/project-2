@@ -21,12 +21,12 @@ module.exports = function(app, passport) {
       res.send(error.message);
     }
   });
-    app.get('/newUserForm', authController.newUserForm);
+    //app.get('/signup', authController.signup);
     app.get('/signin', authController.signin);
-    app.post('/newUserForm', passport.authenticate('local-signup', {
+    app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/choosedesign',
 
-        failureRedirect: '/newUserForm'
+        failureRedirect: '/'
     }));
     app.get('/choosedesign', isLoggedIn, authController.choosedesign);
     app.get('/logout', authController.logout);
@@ -44,4 +44,7 @@ module.exports = function(app, passport) {
 
         failureRedirect: '/signin'
     }));
+    app.get("/", (req,res) =>{
+      res.render("index");
+    })
 };

@@ -5,7 +5,9 @@
     border-radius: 05px;
     position:inline-block;
 }
-
+h3{
+  color: black;
+}
 .navbar-brand{
   font-family: 'Comfortaa', cursive;
   font-size: 50px;
