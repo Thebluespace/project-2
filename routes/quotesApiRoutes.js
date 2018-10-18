@@ -16,7 +16,7 @@ module.exports = function (app) {
     })
     // Get one random quote
     app.get("/api/randomquote", function (req, res){
-        quotes.findAll({order: 'random()'}).then(function(result) {
+        quotes.findOne({order: 'random()'}).then(function(result) {
             return res.json(result);
         })
     })
