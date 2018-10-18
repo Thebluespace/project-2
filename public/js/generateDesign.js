@@ -1,5 +1,3 @@
-console.log('javascript file linked successfully');
-
 const crateDesignButton = document.getElementById('createDesign');
 const previewDiv = document.getElementById('previewDiv');
 
