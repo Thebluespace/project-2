@@ -1,7 +1,5 @@
 var express = require("express");
-
 var db = require("./models");
-
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -16,6 +14,9 @@ var passport   = require('passport');
 var session    = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // For Passport
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret 
