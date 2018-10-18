@@ -9,6 +9,7 @@ module.exports = function(user, type, action, message) {
             message: message,
         }
         orm.insertError(errObj);
+        console.log(``)
     } catch (error) {
         console.log(error);
     }
