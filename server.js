@@ -23,7 +23,7 @@ app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true}))
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 // Routes
-require("./routes/apiRoutes")(app, passport);
+app.use(require("./routes/apiRoutes.js"));
 require("./config/passport/passport.js")(passport, db.user);
 
 var syncOptions = { force: false };
