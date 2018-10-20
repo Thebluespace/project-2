@@ -39,8 +39,6 @@ var passport = require("passport");
       })(req,res)
     });
 
-
-
     router.get('/choosedesign', isLoggedIn, authController.choosedesign);
     router.get('/api/logout', authController.logout);
 
@@ -72,8 +70,6 @@ var passport = require("passport");
         }
       })(req,res)});
 
-    router.get("/", (req,res) =>{
-      res.render("index");
-    });
+    router.get('/', authController.landing);
 
 module.exports = router;
