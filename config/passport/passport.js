@@ -25,11 +25,13 @@ module.exports = function (passport, user) {
 
     passport.use('local-signup', new LocalStrategy(
         {
-            usernameField: 'email',
+            usernameField: 'username',
             passwordField: 'password',
             passReqToCallback: true // allows us to pass back the entire request to the callback
         },
-        function (req, email, password, done) {
+        function (req,email,password,done) {
+            console.log(req.body,email,password);
+            var password = password
             var generateHash = function (password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
             };
