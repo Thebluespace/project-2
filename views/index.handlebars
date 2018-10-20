@@ -1,29 +1,28 @@
-<div class="row p-2 mb-4 bg-info border border-light border-top-0 border-left-0 border-right-0">
-        <div class="col-8 text-center text-white">
-            <h1>Monkey Business</h1>
+<link rel="stylesheet" type="text/css" href="styles/landingstyles.css" />
+<div class="header">
+        <h1>Silly Biz Cardz</h1>
+                {{#if userid}}
+                    <button type="button" class="signIn" id="logout">Logout</button>
+                {{else}}
+                    <button type="button" class="signIn" id="signIn">Sign In</button>
+                {{/if}}
+                
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Why so Serious? </h2>
         </div>
-        <div class="col-4 text-center text-white">
-                <button id="signIn" class="btn btn-info border border-light">Sign In</button>
-            </div>
+    {{#if userid}}
+        <div id="getsilly">
+                <div class="row">
+                    <a href="/choosedesign"><button class="btn">Click Here to get Silly!</button></a>
+                </div>
+        </div>
+    {{else}}
+        <div class="loginDiv"></div>
+    {{/if}}
     </div>
-
-    <div class="row mx-auto">
-            <div class="col-12 text-center text-white p-4">
-                <h3>Welcome to Monkey Business</h3>
-                <h3>Business-ish cards</h3>
-            </div>
-        </div>
-    <div class="loginDiv"></div>
-    <div class="row mx-auto">
-        <div class="col-12 text-center text-white p-4">
-            <div id="emptyDiv"></div>
-            <img src="https://vignette.wikia.nocookie.net/ideas/images/5/5f/Sweet_the_monkey.png/revision/latest/scale-to-width-down/527?cb=20130205174301">
-        </div>
-    </div>
-
-    <footer class="row bg-info text-white text-center border border-light border-bottom-0 fixed-bottom">
-        <div class="col-12 pt-3">
-            <p>Team X - Project 2 - UNC Coding Bootcamp 2018</p>
-        </div>
-    </footer>
+</div>
 <script src="js/landing.js"></script>
