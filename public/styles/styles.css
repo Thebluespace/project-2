@@ -9,7 +9,7 @@
     display: table;
     color: white;
     text-shadow: 0px 0px 15px rgba(207, 205, 205, 0.822);
-    box-shadow: 0 0 10px hsl(180, 67%, 57%);
+    box-shadow: 10px 20px 30px rgba(65, 112, 241, 0.2);;
     border-radius: 3px;
     background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
     position: fixed;    
@@ -111,8 +111,6 @@ h1     {
                       #FFF800);
     animation: .8s shake infinite alternate; 
     z-index: 1;
-  
-    
   }
 
   
@@ -151,20 +149,20 @@ h1     {
         color: white;
         font-size:2vw;
         text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        box-shadow: 0 0 30px hsl(193, 46%, 19%);
+        box-shadow: 15px 20px 30px hsl(193, 82%, 2%);
         border-radius: 05px;
         z-index: 0;
         display: inline-flex;
         float:left;
         position:static;
         background-position: right center; /* change the direction of the change here */
-        background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+        background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
   }
               
       .btn:hover {
-        background-position: left center; /* change the direction of the change here */
+        background-position: right center; /* change the direction of the change here */
         background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
-        box-shadow: 0 0 30px hsl(226, 97%, 56%);   
+        box-shadow: 0px 0px 30px hsl(194, 87%, 39%);   
       }
 
       @media only screen 

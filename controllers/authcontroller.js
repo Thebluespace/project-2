@@ -15,3 +15,12 @@ exports.logout = function(req, res) {
         res.redirect('/');
     });
 }
+exports.landing = function (req, res) {
+
+    if (!req.user) {
+        res.render('index');
+    }
+    else {
+        res.render('index', { userid: req.user.id });
+    }
+}
