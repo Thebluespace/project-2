@@ -2,6 +2,10 @@
 .header {  
     top:0%;
     width:100%;
+}
+.navbar {  
+    padding:1%;
+
     height:10%;
     box-shadow: 0 0 30px hsl(187, 25%, 94%);
     border-radius: 5px;
@@ -200,6 +204,7 @@ h1     {
 
 }
 
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
@@ -360,5 +365,5 @@ h2{
 
       
    
-      
+
 

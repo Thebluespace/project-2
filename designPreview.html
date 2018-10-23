@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="./public/styles/cardDesign.css" />
+    <link rel="stylesheet" type="text/css" href="../public/styles/cardDesign.css" />
     <link rel="stylesheet" type="text/css" href="public/styles/reset.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bevan|Comfortaa|Flamenco|Life+Savers|Poiret+One|Stint+Ultra+Expanded"
@@ -31,28 +31,40 @@
         <form class="form">
             <div>
                 <label for="name">Name</label>
+
                 <input type="text" value="" id="inputName">
                 <button id="addName">Add</button>
             </div>
             <br>
             <div>
                 <label for="phone">Phone Number</label>
+
                 <input type="tel" value="" id="inputPhone">
                 <button id="addPhone">Add</button>
             </div>
             <br>
             <div>
+
                 <label for="email">Email Address</label>
+
                 <input type="email" value="" id="inputEmail">
                 <button id="addEmail">Add</button>
             </div>
             <br>
             <div>
+
                 <label for="website">Website</label>
+
                 <input type="url" value="" id="inputURL">
                 <button id="addURL">Add</button>
             </div>
             <br>
+            <div>
+                    <label for="website">Get Random Quote</label>
+                    <input type="text" value="" id="inputQuote">
+                    <button id="addQuote">Add</button>
+                </div>
+
             <div>
                 <label for="colors">Change Background Color:</label>
                 <br>
@@ -70,7 +82,6 @@
     </div>
     </div>
 
-
     <section class="preview">
 
         <h2>Design Preview</h2>
@@ -86,6 +97,8 @@
             <br>
             <div id="urlField">
             </div>
+            <div id="quoteField">
+            </div>
         </div>
         </div>
         </div>
@@ -97,12 +110,14 @@
     <!-- server.js -->
     <!-- <script src="server.js"></script> -->
 
-    <!-- live preview logic -->
-    <script src="public/js/generateDesign.js"></script>
-
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+
+    <!-- live preview logic -->
+    <script src="public/js/generateDesign.js"></script>
+
+    <script src="public/js/quoteApi.js"></script>
 </body>
 
 </html>
