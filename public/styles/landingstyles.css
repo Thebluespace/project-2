@@ -13,30 +13,34 @@
   border-radius: 3px;
   background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
   position: fixed;    
-  /* overflow:hidden; */
+  overflow:hidden;
   display:inline-flex;
   white-space: nowrap;
   z-index: 1;
 }
-h1     {
-      margin:1%;;
-      font-family: 'Stint Ultra Expanded', cursive;
-      flex: 1 1 auto;
-      margin: 5px;
-      padding: 15px;
-      text-align: center;
-      text-transform: uppercase;
-      transition: 0.5s;
-      background-size: 400% auto;
-      color: white;
-      font-size:2vw;
-      text-shadow: 0px 0px 30px hsl(194, 95%, 8%);
-      /* box-shadow: 0 0 30px hsl(194, 62%, 75%); */
-      z-index: 2;
-      display: inherit;
-      float:left;
-      position: relative;
+
+
+h1  {
+  margin:1%;;
+  font-family: 'Stint Ultra Expanded', cursive;
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 400% auto;
+  color: white;
+  font-size:2vw;
+  text-shadow: 0px 20px 30px hsl(194, 95%, 8%);
+  /* box-shadow: 0 0 30px hsl(194, 62%, 75%); */
+  z-index: 2;
+  display: inherit;
+  float:left;
+  position: relative;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
+
 .signIn {
   margin: 5px;
   padding: 10px;
@@ -55,7 +59,9 @@ h1     {
   float:right;
   background-position: right center; /* change the direction of the change here */
   background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+
 }
+
 .signIn:hover {
   background-position: left ; /* change the direction of the change here */
   background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
@@ -63,13 +69,14 @@ h1     {
 }
 
 body {
-  height: 150%;
+  width:100%;
+  height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background:white; */
-  background-image: url("../styles/images/smiley.jpg");
+  background:white;
+  /* background-image: url("../styles/images/jokers.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; 
@@ -105,8 +112,6 @@ body {
                     #FFF800);
   animation: .8s shake infinite alternate; 
   z-index: 1;
-
-  
 }
 
 @keyframes shake {
@@ -117,6 +122,7 @@ body {
   20% { transform: skewX(0deg); }
   100% { transform: skewX(0deg); }  
 } 
+
   .container {
       padding:20px;
       margin-bottom:50px;
@@ -130,6 +136,7 @@ body {
       min-height: 100vh;
       position:flex;
     }
+
     .btn {
       flex: 1 1 auto;
       margin: 10px;
@@ -157,6 +164,7 @@ body {
       background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
       box-shadow: 0 0 30px hsl(226, 97%, 56%);   
     }
+
     @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 480px)
@@ -189,6 +197,7 @@ and (orientation: landscape) {
 and (min-device-width: 375px) 
 and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2) { 
+ 
   h1 {
     float:left;
     width:15%;
@@ -201,12 +210,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     overflow: hidden;
     z-index: 1;
   }
+
   .header  {
     float:left;
     width:100%;
     height:5%;
   }
-  .signIn{
+
+  .signIn {
     padding:3%;
     float:right;
     width:12%;
@@ -217,12 +228,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 8px;
     text-align:center;
   }
-  h2{
+
+  h2 {
   float:none;
   width: 100%;
   margin:20px;
   margin-left: -20px;
   }
+
   .btn {
     flex: 1 1 auto;
     margin: 100px;
@@ -242,11 +255,124 @@ and (-webkit-min-device-pixel-ratio: 2) {
     float:left;
     position:relative;
     background-position: right center; /* change the direction of the change here */
-    background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));}
 }
-  
-  
+
+#signinform { 
+  position: relative; 
+  text-align: center;
+  height: 350%;
+  width: 50%; 
+  vertical-align: middle;
+  margin:auto;
+  z-index: auto;
+  border-radius: 3px;
+  /* background-color: white; */
+  background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+  padding:20px;
+  margin:50px;
+  font-family: 'Comfortaa', cursive;
+  color:#FFF;
+  min-height:225px;
+  max-width:250px;
+  margin:40px auto;
+  border-radius:5px;
+  box-shadow:10px 20px 30px rgba(0, 0, 0, 0.2);
+  display:flex;
+  flex-direction:column;
+  font-size: 30px;
 }
+
+label{
+  position: relative; 
+  height: 300%;
+  width: 100%; 
+  vertical-align: middle;
+  margin:auto;
+  display:inline-block;
+  flex-direction:column;
+  z-index: auto;
+  border-radius: 3px;
+  padding:0px;
+  margin-left: 0%;
+  text-align: center;
+}
+
+input {
+  font-size: 14px;
+  align-items: center;
+  position: relative; 
+  padding:12px;
+  border-radius: 3px;
+  height: 325%;
+  width: 75%; 
+  display:inline-block;
+  flex-direction:column;
+  vertical-align: middle;
+  z-index: auto;
+  margin-left: 20%;
+  margin-right:20%;
+  margin:0 auto
+
+}
+
+.loginbtn, .signUpbtn{
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  font-size:1.25vw;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.2) ;
+  border-radius: 3px;
+  display: inline;
+  min-width: 10%;
+  width:100%;
+  box-sizing:border-box;
+  font-family: 'Comfortaa', cursive;
+  z-index:auto;
+  background-color: aliceblue;
+}
+
+.signUpbtn:hover, .loginbtn:hover {
+  background-position: right ; /* change the direction of the change here */
+  background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+  box-shadow: 0 0 30px hsl(226, 97%, 56%);
+  color:white;
+}
+
+.createbtn {
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  font-size:1.25vw;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.2) ;
+  border-radius: 3px;
+  display: inline;
+  min-width: 10%;
+  width:100%;
+  box-sizing:border-box;
+  font-family: 'Comfortaa', cursive;
+  z-index:auto;
+  background-color: aliceblue;
+
+}
+
+.createbtn:hover{
+  background-position: right ; /* change the direction of the change here */
+  background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+  box-shadow: 0 0 30px hsl(226, 97%, 56%);
+  color:white;
+}
+
 /* Portrait */
 @media only screen 
 and (min-device-width: 375px) 
@@ -273,13 +399,15 @@ and (-webkit-min-device-pixel-ratio: 3) {
 and (min-device-width: 375px) 
 and (max-device-width: 812px) 
 and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) { 
+and (orientation: portrait){ 
+
 .header  {
 float:left;
 width:100%;
 height:5%;
 }
-.signIn{
+
+.signIn {
 float:center;
 width:15%;
 display:inline-flex;
@@ -287,6 +415,7 @@ margin-right: 75px;
 font-size: 13px;
 text-align:center;
 }
+
 h1 {
 float:left;
 width:20%;
@@ -297,14 +426,16 @@ text-align:center;
 display:inline-flex;
 white-space: nowrap;
 }
-h2{
+
+h2 {
 float:none;
 width: 100%;
 margin:50px;
 margin-left: -35px;
 font-size: 22px;
 }
-.btn{
+
+.btn {
 float:center;
 width:60%;
 margin-right:20px;
@@ -313,10 +444,4 @@ font-size:20px;
 text-align:center;
 }
 }
-/* Landscape */
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) { 
-}
+
