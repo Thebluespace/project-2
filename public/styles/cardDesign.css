@@ -34,18 +34,26 @@
 
 .card-bg-default {
     background-color: lightgray;
+    width: 600px;
+    height: 250px ;
 }
 
 .card-bg-white {
     background-color: white;
+    width: 600px;
+    height: 250px ;
 }
 
 .card-bg-black {
     background-color: black;
+    width: 600px;
+    height: 250px ;
 }
 
 .card-bg-red {
     background-color: red;
+    width: 600px;
+    height: 250px ;
 }
 
 /* border */
