@@ -29,27 +29,33 @@
         <form class="form">
             <div>
                 <label for="name">Add a Name</label>
-                <input type="text" value="Name" id="inputName">
+                <input type="text" value="" id="inputName">
                 <button id="addName">Add</button>
             </div>
             <div>
                 <label for="phone">Add a Phone Number</label>
-                <input type="tel" value="1-(555)-555-5555" id="inputPhone">
+                <input type="tel" value="" id="inputPhone">
                 <button id="addPhone">Add</button>
             </div>
 
 
             <div>
                 <label for="email">Add an Email Address</label>
-                <input type="email" value="bootstrap@example.com" id="inputEmail">
+                <input type="email" value="" id="inputEmail">
                 <button id="addEmail">Add</button>
             </div>
 
             <div>
                 <label for="website">Add a Website</label>
-                <input type="url" value="https://getsilly.com" id="inputURL">
+                <input type="url" value="" id="inputURL">
                 <button id="addURL">Add</button>
             </div>
+
+            <div>
+                    <label for="website">Get Random Quote</label>
+                    <input type="text" value="" id="inputQuote">
+                    <button id="addQuote">Add</button>
+                </div>
 
             <div>
                 <label for="colors">Change Background Color:</label>
@@ -64,7 +70,7 @@
     </section>
 
     <section>
-        <h2>Design Preview</h2>
+        <h2>Design Preview:</h2>
 
         <div id="card" class="card-area card-bg-default">
             <div id="nameField">
@@ -75,6 +81,8 @@
             </div>
             <div id="urlField">
             </div>
+            <div id="quoteField">
+            </div>
         </div>
 
         <button>Save Design</button>
@@ -83,12 +91,14 @@
     <!-- server.js -->
     <!-- <script src="server.js"></script> -->
 
-    <!-- live preview logic -->
-    <script src="public/js/generateDesign.js"></script>
-
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+
+    <!-- live preview logic -->
+    <script src="public/js/generateDesign.js"></script>
+
+    <script src="public/js/quoteApi.js"></script>
 </body>
 
 </html>
