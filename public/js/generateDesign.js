@@ -1,4 +1,4 @@
-console.log('javascript file linked successfully');
+console.log('Design logic module linked successfully');
 
 // data
 
