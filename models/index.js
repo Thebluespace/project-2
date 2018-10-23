@@ -34,4 +34,8 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+//Relations
+// db.user.hasMany(db.cardInfo);
+// db.cardInfo.belongsTo(db.user);
+
 module.exports = db;
