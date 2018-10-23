@@ -84,7 +84,7 @@ saveButton.addEventListener('click', () => {
         name: name.value,
         phone: phone.value,
         email: email.value,
-        bgcolor: card.className,
+        // bgcolor: card.className,
         quote:quoteField.value,
         url: url.value
     }

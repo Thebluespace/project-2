@@ -75,7 +75,7 @@ router.get('/', authController.landing);
 
 //Saving designs
 router.post('/api/addDesign', (req, res) => {
-  console.log("current design html is  " + req.body.currentDesignHTML); 
+  console.log("current design html is  " + req.body.currentDesignHTML);
   db.CardInfo.create({
     userId: req.user.id,
     name: req.body.name,
@@ -83,10 +83,24 @@ router.post('/api/addDesign', (req, res) => {
     email: req.body.email,
     website: req.body.url,
     quote: req.body.quote,
-    bgcolor: req.body.bgcolor
+    // bgcolor: req.body.bgcolor
   }).then(function (dbcardInfo) {
     res.json(dbcardInfo);
   });
 });
+
+router.get('/savedDesign', isLoggedIn, authController.savedDesign);
+
+router.get('/api/savedDesign/', (req, res) => {
+  // console.log("getting user's designs");
+  db.CardInfo.findAll({
+    where: {
+      userId: req.user.id
+    }
+  }).then(function (userDesigns) {
+      // console.log(userDesigns);
+      res.send(userDesigns);
+    });
+})
 
 module.exports = router;
