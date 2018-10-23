@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="../public/styles/cardDesign.css" />
     <link rel="stylesheet" type="text/css" href="public/styles/reset.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Bevan|Comfortaa|Flamenco|Life+Savers|Poiret+One|Stint+Ultra+Expanded"
+        rel="stylesheet">
     <title>Design Preview Page</title>
 
 </head>
@@ -19,38 +19,46 @@
 
 <body>
 
-    <header>
-        <h1>Silly BiZz</h1>
-    </header>
+    <div class="header">
+        <h1>Silly Biz Cardz</h1>
+        <button type="button" class="signIn" href="/public/styles/choosedesign.html">Sign In</button>
+    </div>
 
     <section class="design-tools">
-        <h2>Enter your contact info as you would like it to appear on your card:</h2>
+        <h2>Enter your info as you would like it to appear on your card:</h2>
 
+        <br>
         <form class="form">
             <div>
-                <label for="name">Add a Name</label>
+                <label for="name">Name</label>
+
                 <input type="text" value="" id="inputName">
                 <button id="addName">Add</button>
             </div>
+            <br>
             <div>
-                <label for="phone">Add a Phone Number</label>
+                <label for="phone">Phone Number</label>
+
                 <input type="tel" value="" id="inputPhone">
                 <button id="addPhone">Add</button>
             </div>
-
-
+            <br>
             <div>
-                <label for="email">Add an Email Address</label>
+
+                <label for="email">Email Address</label>
+
                 <input type="email" value="" id="inputEmail">
                 <button id="addEmail">Add</button>
             </div>
-
+            <br>
             <div>
-                <label for="website">Add a Website</label>
+
+                <label for="website">Website</label>
+
                 <input type="url" value="" id="inputURL">
                 <button id="addURL">Add</button>
             </div>
-
+            <br>
             <div>
                     <label for="website">Get Random Quote</label>
                     <input type="text" value="" id="inputQuote">
@@ -59,7 +67,10 @@
 
             <div>
                 <label for="colors">Change Background Color:</label>
+                <br>
+                <br>
                 <select id="selectColor" name="colors" onchange="changeColor()">
+
                     <option value="default">Default</option>
                     <option value="white">White</option>
                     <option value="black">Black</option>
@@ -68,22 +79,30 @@
             </div>
         </form>
     </section>
+    </div>
+    </div>
 
-    <section>
-        <h2>Design Preview:</h2>
+    <section class="preview">
 
+        <h2>Design Preview</h2>
         <div id="card" class="card-area card-bg-default">
             <div id="nameField">
             </div>
+            <br>
             <div id="phoneField">
             </div>
+            <br>
             <div id="emailField">
             </div>
+            <br>
             <div id="urlField">
             </div>
             <div id="quoteField">
             </div>
         </div>
+        </div>
+        </div>
+
 
         <button>Save Design</button>
     </section>
