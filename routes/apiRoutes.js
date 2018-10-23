@@ -4,15 +4,6 @@ var router = express.Router();
 var authController = require('../controllers/authcontroller.js');
 var passport = require("passport");
 
-router.get("/api/cardInfo", (req, res) => {
-  try {
-    var data = db.CardInfo;
-    res.json(data);
-  } catch (error) {
-    console.log(error);
-    res.send(error.message);
-  }
-});
 
 router.post('/api/signup', (req, res) => {
 
@@ -95,8 +86,6 @@ router.get("/api/designs", (req, res) => {
     return res.json(result);
   })
 })
-
-
 
 // // Get all designs for user
 
