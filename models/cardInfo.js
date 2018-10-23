@@ -22,8 +22,11 @@ module.exports = function(sequelize, DataTypes) {
       },
       quote: {
         type: DataTypes.TEXT
+      },
+      bgcolor: {
+        type: DataTypes.STRING,
+        defaultValue: "Default"
       }
-
     });
   
     CardInfo.associate = function(models) {
