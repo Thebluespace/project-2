@@ -24,40 +24,41 @@
         <button type="button" class="signIn" href="/public/styles/choosedesign.html">Sign In</button>
     </div>
 
-    <div class="col-lg-3"></div>
-        
     <section class="design-tools">
-        <h2>Enter your contact info as you would like it to appear on your card:</h2>
+        <h2>Enter your info as you would like it to appear on your card:</h2>
 
-    
+        <br>
         <form class="form">
             <div>
-                <label for="name">Add a Name</label>
-                <input type="text" value="Name" id="inputName">
+                <label for="name">Name</label>
+                <input type="text" value="" id="inputName">
                 <button id="addName">Add</button>
             </div>
+            <br>
             <div>
-                <label for="phone">Add a Phone Number</label>
-                <input type="tel" value="1-(555)-555-5555" id="inputPhone">
+                <label for="phone">Phone Number</label>
+                <input type="tel" value="" id="inputPhone">
                 <button id="addPhone">Add</button>
             </div>
-
-
+            <br>
             <div>
-                <label for="email">Add an Email Address</label>
-                <input type="email" value="bootstrap@example.com" id="inputEmail">
+                <label for="email">Email Address</label>
+                <input type="email" value="" id="inputEmail">
                 <button id="addEmail">Add</button>
             </div>
-
+            <br>
             <div>
-                <label for="website">Add a Website</label>
-                <input type="url" value="https://getsilly.com" id="inputURL">
+                <label for="website">Website</label>
+                <input type="url" value="" id="inputURL">
                 <button id="addURL">Add</button>
             </div>
-
+            <br>
             <div>
                 <label for="colors">Change Background Color:</label>
+                <br>
+                <br>
                 <select id="selectColor" name="colors" onchange="changeColor()">
+
                     <option value="default">Default</option>
                     <option value="white">White</option>
                     <option value="black">Black</option>
@@ -69,21 +70,26 @@
     </div>
     </div>
 
-    <div class ="col-lg-9"></div>
-    <section>
-        <h2>Design Preview</h2>
 
+    <section class="preview">
+
+        <h2>Design Preview</h2>
         <div id="card" class="card-area card-bg-default">
             <div id="nameField">
             </div>
+            <br>
             <div id="phoneField">
             </div>
+            <br>
             <div id="emailField">
             </div>
+            <br>
             <div id="urlField">
             </div>
         </div>
         </div>
+        </div>
+
 
         <button>Save Design</button>
     </section>
