@@ -28,8 +28,8 @@ const urlField = document.getElementById('urlField');
 addToCard = (input, output) => {
     console.log('you clicked the ' + input.value + ' button');
     event.preventDefault();
-    output.innerHTML = 
-    `
+    output.innerHTML =
+        `
         <h1> ${input.value} </h1>
     `;
 };
@@ -60,8 +60,8 @@ addURLButton.addEventListener('click', () => {
 changeColor = () => {
     let color = document.getElementById('selectColor').value;
     const colorChoices = ['card-gb-default', 'card-bg-white', 'card-bg-black, card-bg-red'];
-    for (let i = 0; i < colorChoices.length; i ++) {
-        if (color === 'default') {  
+    for (let i = 0; i < colorChoices.length; i++) {
+        if (color === 'default') {
             card.className = 'card-bg-default';
         } else if (color === 'white') {
             card.className = 'card-bg-white';
@@ -73,3 +73,23 @@ changeColor = () => {
     }
 
 }
+
+
+//Saving
+const saveButton = document.getElementById('saveButton');
+
+saveButton.addEventListener('click', () => {
+
+    let cardObject = {
+        name: name.value,
+        phone: phone.value,
+        email: email.value,
+        bgcolor: card.className,
+        quote:quoteField.value,
+        url: url.value
+    }
+    console.log("current card" + cardObject);
+    $.post("/api/addDesign", cardObject);
+
+
+});
