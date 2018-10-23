@@ -59,6 +59,7 @@ h1  {
   float:right;
   background-position: right center; /* change the direction of the change here */
   background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+
 }
 
 .signIn:hover {
@@ -135,6 +136,7 @@ body {
       min-height: 100vh;
       position:flex;
     }
+
     .btn {
       flex: 1 1 auto;
       margin: 10px;
