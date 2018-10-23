@@ -4,15 +4,6 @@ var router = express.Router();
 var authController = require('../controllers/authcontroller.js');
 var passport = require("passport");
 
-router.get("/api/examples", (req, res) => {
-  try {
-    var data = orm.getExamples();
-    res.json(data);
-  } catch (error) {
-    console.log(error);
-    res.send(error.message);
-  }
-});
 
 router.post('/api/signup', (req, res) => {
 
@@ -102,5 +93,39 @@ router.get('/api/savedDesign/', (req, res) => {
       res.send(userDesigns);
     });
 })
+
+// Get all designs in database
+router.get("/api/designs", (req, res) => {
+  db.CardInfo.findAll({}).then(function (result) {
+    return res.json(result);
+  })
+})
+
+// // Get all designs for user
+
+router.get("/api/designs/:id", (req, res) => {
+  try {
+    var data = db.CardInfo.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (data) {
+      res.json(data);
+    })
+
+  } catch (error) {
+    console.log(error);
+    res.send(error.message);
+  }
+});
+
+// list quotes in database
+router.get("/api/quotes", (req, res) => {
+  db.Quotes.findAll({}).then(function (result) {
+    return res.json(result);
+  })
+})
+
+
 
 module.exports = router;
