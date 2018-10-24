@@ -210,9 +210,11 @@ h1  {
 /* background color */
 
 .card-bg-default {
-    background-color: lightgray;
+
+    background-color: rgb(252, 252, 252);
     width: 600px;
     height: 250px ;
+
 }
 
 .card-bg-white {

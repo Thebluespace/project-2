@@ -2,20 +2,15 @@ module.exports = function(sequelize, DataTypes) {
     var CardInfo = sequelize.define("CardInfo", {
       name: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 55]
-        }
+
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: false,
-        len: [1]
+
       },
       phone: {
           type: DataTypes.INTEGER,
-          allowNull: false,
-          len: [1, 10]
+
       },
       website: {
           type: DataTypes.STRING
