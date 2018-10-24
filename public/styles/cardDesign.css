@@ -1,21 +1,197 @@
-/* form styling */
+.header {  
+    top:0%;
+    width:100%;
+    height:10%;
+    box-shadow: 0 0 30px hsl(187, 25%, 94%);
+    border-radius: 5px;
+    position:absolute;
+    display: table;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(207, 205, 205, 0.822);
+    box-shadow: 10px 20px 30px rgba(65, 112, 241, 0.2);;
+    border-radius: 3px;
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    position: fixed;    
+    /* overflow:hidden; */
+    display:inline-flex;
+    white-space: nowrap;
+    z-index: 1;
+    font-size:30px;
+    text-shadow: 0px 20px 30px hsl(194, 95%, 8%);
+  }
 
-.form {
+h1  {
+    font-family: 'Stint Ultra Expanded', cursive;
+    flex: 1 1 auto;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 400% auto;
+    color: white;
+    font-size:20px;
+    text-shadow: 0px 20px 30px hsl(194, 95%, 8%);
+    /* box-shadow: 0 0 30px hsl(194, 62%, 75%); */
+    display: inherit;
+    float:left;
+    position: relative;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
 
+  .signIn {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    font-size:1.25vw;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 30px  hsl(61, 94%, 48%);
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 10%;
+    width:10%;
+    float:right;
+    background-position: right center; /* change the direction of the change here */
+    background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+  }
+  
+  .signIn:hover {
+    background-position: left ; /* change the direction of the change here */
+    background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    box-shadow: 0 0 30px hsl(226, 97%, 56%);
+    
+  }
+  
+  body {
+    width:100%;
+    height: 100%;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("../styles/images/yellowsmile.jpg"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+  }
+
+  .design-tools {
+    position: relative; 
+    text-align: left;
+    height: 10%;
+    width: 50%; 
+    vertical-align: middle;
+    z-index: auto;
+    border-radius: 3px;
+    /* background-color: white; */
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    padding:50px;
+    padding-top:33px;
+    margin:20px;
+    font-family: 'Comfortaa', cursive;
+    color:#FFF;
+    min-height:225px;
+    max-width:250px;
+    margin:50px auto;
+    margin-left:-33px;
+    border-radius:3px;
+    box-shadow:10px 20px 30px rgba(0, 0, 0, 0.2);
+    display:inline;
+    flex-direction:column;
+    font-size: 20px;
+    overflow: hidden;
+    margin-top:20%;
+  }
+  
+  #inputName, #inputPhone, #inputEmail, #inputURL, #selectColor{
+      padding:3px;
+      font-size: 14px;
+      align-items: center;
+      position: relative; 
+      padding:12px;
+      border-radius: 3px;
+      height: 325%;
+      width: 100%; 
+      display:inline-block;
+      flex-direction:column;
+      vertical-align: middle;
+      z-index: auto;
+      margin-left: 20%;
+      margin-right:20%;
+      margin:0 auto;
+      font-family: 'Stint Ultra Expanded', cursive;
+      color: rgb(54, 54, 54);    
+  }
+
+  #addName, #addPhone, #addEmail, #addURL, #selectColor {
+    margin: 5px;
+    padding: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    font-size:1.25vw;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2) ;
+    border-radius: 3px;
+    display: inline;
+    margin-left:2px;
+    min-width: 10%;
+    width:111%;
+    box-sizing:border-box;
+    font-family: 'Comfortaa', cursive;
+    z-index:auto;
+    background-color: aliceblue;
+    background-position: right; /* change the direction of the change here */
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    color: white;
+  }
+
+  #addName:hover, #addPhone:hover, #addEmail:hover, #addURL:hover, #selectColor:hover{
+  background-position: right ; 
+  background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+  box-shadow: 0 0 60px hsl(65, 30%, 92%);
+  color:white; 
+  } 
+
+  h2{
+    font-family: 'Stint Ultra Expanded', cursive;
+  }
+
+
+.preview {
+    padding:20px;
+    border:0px;
+    margin:auto;
+    margin-left:165px;
+    margin-top:-200px;
+    position: fixed;
+    display: inline;
+    float:left;
+    z-index:1;
+    font-family: 'Stint Ultra Expanded', cursive;
 }
 
-/* card size/position */
+.form {
+    padding:5px;
+    height:100%;
+    text-align: left;
+    }
 
 .card-area {
-    width: 600px;
+    padding:10px;
+    width: 475px;
     height: 250px ;
-
+    border-radius:3px;
+    box-shadow: 0px 0px 20px rgb(63, 61, 61);
+    color:black;
 }
 
 /* positioning */
 
 .name-area {
-
 }
 
 .phone-area {
@@ -33,9 +209,10 @@
 /* background color */
 
 .card-bg-default {
-    background-color: lightgray;
-    width: 600px;
-    height: 250px ;
+
+    background-color: rgb(252, 252, 252);
+
+
 }
 
 .card-bg-white {
@@ -61,4 +238,36 @@
 .card-border-default {
     border: solid, balck, 2px;
 
+}
+
+button {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    font-size:1.25vw;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2) ;
+    border-radius: 3px;
+    display: inline;
+    width: 500px;
+    margin-left:-2px;
+    min-width: 10%;
+    box-sizing:border-box;
+    font-family: 'Comfortaa', cursive;
+    z-index:auto;
+    background-color: aliceblue;
+    background-position: left; /* change the direction of the change here */
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    color: white;
+}
+
+button:hover{
+    background-position: right ; 
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    box-shadow: 0 0 60px hsl(65, 30%, 92%);
+    color:white; 
 }

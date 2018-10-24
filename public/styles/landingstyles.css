@@ -76,10 +76,12 @@ body {
   justify-content: center;
   align-items: center;
   background:white;
-  /* background-image: url("../styles/images/jokers.jpg"); */
+
+  /* background-image: url("../styles/images/yellowsmile.jpg");
+
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; 
+  background-size: cover;  */
 
 }
 
@@ -256,6 +258,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     position:relative;
     background-position: right center; /* change the direction of the change here */
     background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));}
+
 }
 
 #signinform { 
@@ -373,6 +376,7 @@ input {
   color:white;
 }
 
+
 /* Portrait */
 @media only screen 
 and (min-device-width: 375px) 
@@ -444,5 +448,3 @@ font-size:20px;
 text-align:center;
 }
 }
-
-
