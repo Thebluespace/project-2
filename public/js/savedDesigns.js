@@ -2,7 +2,7 @@ $(document).ready(function () {
     let usersDesigns;
     function getDesigns() {
 
-        $.get("/api/savedDesign/", function (data) {
+        $.get("/api/designs/currentuser", function (data) {
             usersDesigns= data;
 
             if (usersDesigns.length === 0){
@@ -19,6 +19,8 @@ $(document).ready(function () {
 renderDesigns = (usersDesigns) =>{
     usersDesigns.forEach(element => {
         let thisCard = $("<div>");
+        thisCard.addClass("card");
+        thisCard.addClass(element.bgcolor);
         thisCard.html(`
         <div class="name">${element.name}</div>
         <div class="phone">${element.phone}</div>

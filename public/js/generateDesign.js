@@ -17,11 +17,13 @@ const addURLButton = document.getElementById('addURL');
 // empty divs for populating data / styles
 
 const cardBackground = document.getElementById('card');
-
 const nameField = document.getElementById('nameField');
 const phoneField = document.getElementById('phoneField');
 const emailField = document.getElementById('emailField');
 const urlField = document.getElementById('urlField');
+
+//variable to hold default bg color
+let bgcolorClass = 'card-bg-default';
 
 // function that adds what is in the input field to the card area
 
@@ -63,12 +65,16 @@ changeColor = () => {
     for (let i = 0; i < colorChoices.length; i++) {
         if (color === 'default') {
             card.className = 'card-bg-default';
+            bgcolorClass = 'card-bg-default';
         } else if (color === 'white') {
             card.className = 'card-bg-white';
+            bgcolorClass = 'card-bg-white';
         } else if (color === 'black') {
             card.className = 'card-bg-black';
+            bgcolorClass = 'card-bg-black';
         } else if (color === 'red') {
             card.className = 'card-bg-red';
+            bgcolorClass = 'card-bg-red';
         }
     }
 
@@ -84,11 +90,11 @@ saveButton.addEventListener('click', () => {
         name: name.value,
         phone: phone.value,
         email: email.value,
-        // bgcolor: card.className,
-        quote:quoteField.value,
+        bgcolor: bgcolorClass,
+        quote: $("#quoteField").html(),
         url: url.value
     }
-    console.log("current card" + cardObject);
+
     $.post("/api/addDesign", cardObject);
 
 
