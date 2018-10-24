@@ -59,8 +59,7 @@ h1  {
   .signIn:hover {
     background-position: left ; /* change the direction of the change here */
     background-image: linear-gradient(to right, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
-    box-shadow: 0 0 30px hsl(226, 97%, 56%);
-    
+    box-shadow: 0 0 30px hsl(226, 97%, 56%); 
   }
   
   body {
@@ -162,10 +161,11 @@ h1  {
 
 
 .preview {
+    position: fixed;
     padding:20px;
     border:0px;
     margin:auto;
-    margin-left:165px;
+    margin-left:200px;
     margin-top:-200px;
     position: fixed;
     display: inline;
@@ -181,6 +181,7 @@ h1  {
     }
 
 .card-area {
+    position: fixed;
     padding:10px;
     width: 475px;
     height: 250px ;
@@ -209,20 +210,27 @@ h1  {
 /* background color */
 
 .card-bg-default {
-    background-color: rgb(252, 252, 252);
-
+    background-color: lightgray;
+    width: 600px;
+    height: 250px ;
 }
 
 .card-bg-white {
     background-color: white;
+    width: 600px;
+    height: 250px ;
 }
 
 .card-bg-black {
     background-color: black;
+    width: 600px;
+    height: 250px ;
 }
 
 .card-bg-red {
     background-color: red;
+    width: 600px;
+    height: 250px ;
 }
 
 /* border */

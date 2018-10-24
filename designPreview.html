@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="./public/styles/cardDesign.css" />
+    <link rel="stylesheet" type="text/css" href="../public/styles/cardDesign.css" />
     <link rel="stylesheet" type="text/css" href="public/styles/reset.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bevan|Comfortaa|Flamenco|Life+Savers|Poiret+One|Stint+Ultra+Expanded"
@@ -54,6 +54,12 @@
             </div>
             <br>
             <div>
+                    <label for="website">Get Random Quote</label>
+                    <input type="text" value="" id="inputQuote">
+                    <button id="addQuote">Add</button>
+                </div>
+
+            <div>
                 <label for="colors">Change Background Color:</label>
                 <br>
                 <br>
@@ -86,6 +92,8 @@
             <br>
             <div id="urlField">
             </div>
+            <div id="quoteField">
+            </div>
         </div>
         </div>
         </div>
@@ -97,12 +105,14 @@
     <!-- server.js -->
     <!-- <script src="server.js"></script> -->
 
-    <!-- live preview logic -->
-    <script src="public/js/generateDesign.js"></script>
-
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+
+    <!-- live preview logic -->
+    <script src="public/js/generateDesign.js"></script>
+
+    <script src="public/js/quoteApi.js"></script>
 </body>
 
 </html>
