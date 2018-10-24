@@ -1,1 +1,28 @@
-{{#}}
+<link rel="stylesheet" type="text/css" href="styles/landingstyles.css" />
+<div class="header">
+        <h1>Silly Biz Cardz</h1>
+                {{#if userid}}
+                    <button type="button" class="signIn" id="logout">Logout</button>
+                {{else}}
+                    <button type="button" class="signIn" id="signIn">Sign In</button>
+                {{/if}}
+                
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Why so Serious? </h2>
+        </div>
+    {{#if userid}}
+        <div id="getsilly">
+                <div class="row">
+                    <a href="/choosedesign"><button class="btn">Click Here to get Silly!</button></a>
+                </div>
+        </div>
+    {{else}}
+        <div class="loginDiv"></div>
+    {{/if}}
+    </div>
+</div>
+<script src="js/landing.js"></script>

@@ -6,63 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="../public/styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../public/styles/cardDesign.css" />
+    <link rel="stylesheet" type="text/css" href="public/styles/reset.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Bevan|Comfortaa|Flamenco|Life+Savers|Poiret+One|Stint+Ultra+Expanded"
+        rel="stylesheet">
     <title>Design Preview Page</title>
 
 </head>
 
 
-<body class="container-fluid bg-success">
+<body>
 
-    <div class="row p-2 mb-4 bg-info border border-light border-top-0 border-left-0 border-right-0">
-        <div class="col-12 text-center text-white">
-            <h2>Preview</h2>
-        </div>
+    <div class="header">
+        <h1>Silly Biz Cardz</h1>
+        <button type="button" class="signIn" href="/public/styles/choosedesign.html">Sign In</button>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="container bg-info border border-light" style="height:300px; width:500px;">
-                <p>placeholder</p>
+    <section class="design-tools">
+        <h2>Enter your info as you would like it to appear on your card:</h2>
+
+        <br>
+        <form class="form">
+            <div>
+                <label for="name">Name</label>
+
+                <input type="text" value="" id="inputName">
+                <button id="addName">Add</button>
+            </div>
+            <br>
+            <div>
+                <label for="phone">Phone Number</label>
+
+                <input type="tel" value="" id="inputPhone">
+                <button id="addPhone">Add</button>
+            </div>
+            <br>
+            <div>
+
+                <label for="email">Email Address</label>
+
+                <input type="email" value="" id="inputEmail">
+                <button id="addEmail">Add</button>
+            </div>
+            <br>
+            <div>
+
+                <label for="website">Website</label>
+
+                <input type="url" value="" id="inputURL">
+                <button id="addURL">Add</button>
+            </div>
+            <br>
+            <div>
+                    <label for="website">Get Random Quote</label>
+                    <input type="text" value="" id="inputQuote">
+                    <button id="addQuote">Add</button>
+                </div>
+
+            <div>
+                <label for="colors">Change Background Color:</label>
+                <br>
+                <br>
+                <select id="selectColor" name="colors" onchange="changeColor()">
+
+                    <option value="default">Default</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+        </form>
+    </section>
+    </div>
+    </div>
+
+    <section class="preview">
+
+        <h2>Design Preview</h2>
+        <div id="card" class="card-area card-bg-default">
+            <div id="nameField">
+            </div>
+            <br>
+            <div id="phoneField">
+            </div>
+            <br>
+            <div id="emailField">
+            </div>
+            <br>
+            <div id="urlField">
+            </div>
+            <div id="quoteField">
             </div>
         </div>
-    </div>
-
-    <div class="row m-4">
-        <div class="col-12">
-            <div class="container text-center">
-                <button class="btn btn-info border border-light">Save Design</button>
-            </div>
         </div>
-    </div>
-
-    <div class="row mx-auto">
-        <div class="col-12 text-center text-white p-4">
-            <img src="https://vignette.wikia.nocookie.net/ideas/images/5/5f/Sweet_the_monkey.png/revision/latest/scale-to-width-down/527?cb=20130205174301">
         </div>
-    </div>
 
-    <footer class="row bg-info text-white text-center border border-light border-bottom-0 fixed-bottom">
-        <div class="col-12 pt-3">
-            <p>Team X - Project 2 - UNC Coding Bootcamp 2018</p>
-        </div>
-    </footer>
+
+        <button>Save Design</button>
+    </section>
 
     <!-- server.js -->
-    <script src="server.js"></script>
-    <!-- Bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+    <!-- <script src="server.js"></script> -->
+
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+
+    <!-- live preview logic -->
+    <script src="public/js/generateDesign.js"></script>
+
+    <script src="public/js/quoteApi.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-            <a class="navbar-brand" href="#">Silly Biz Cardz </a>
-            <div class="signin">
-                <button type="button" style="position: absolute; right: 0;" class="btn-2 btn-outline-primary" href="/public/styles/choosedesign.html">
-                    Sign In</button>
-            </div>
-        </nav>
-        </div>
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./styles/cardDesign.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/reset.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+    <title>Design Preview Page</title>
+
+</head>
+
 
 <body>
-    <video autoplay loop id="video-background" muted plays-inline>
-        <source src="https://player.vimeo.com/external/223159355.sd.mp4?s=aae34c7d98fdf1459dcb0f79758674b961b7574d&profile_id=164"
-            type="video/mp4">
-    </video>
 
-    <div class="container-row"></div>
-   
+    <div class="header">
+        <h1>Silly BiZz</h1>
+                        <button type="button" class="signIn" id="savedDesign">My Saved Cards</button>
+                <button type="button" class="signIn" id="logout">Logout</button>
+    </div>
+
+    <section class="design-tools">
+        <h2>Enter your contact info as you would like it to appear on your card:</h2>
+
+        <form class="form">
+            <div>
+                <label for="name">Add a Name</label>
+                <input type="text" value="" id="inputName">
+                <button id="addName">Add</button>
+            </div>
+            <div>
+                <label for="phone">Add a Phone Number</label>
+                <input type="tel" value="" id="inputPhone">
+                <button id="addPhone">Add</button>
+            </div>
+
+
+            <div>
+                <label for="email">Add an Email Address</label>
+                <input type="email" value="" id="inputEmail">
+                <button id="addEmail">Add</button>
+            </div>
+
+            <div>
+                <label for="website">Add a Website</label>
+                <input type="url" value="" id="inputURL">
+                <button id="addURL">Add</button>
+            </div>
+
+            <div>
+                    <label for="website">Get Random Quote</label>
+                    <input type="text" value="" id="inputQuote">
+                    <button id="addQuote">Add</button>
+                </div>
+
+            <div>
+                <label for="colors">Change Background Color:</label>
+                <select id="selectColor" name="colors" onchange="changeColor()">
+                    <option value="default">Default</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Design Preview:</h2>
+
+        <div id="card" class="card-area card-bg-default">
+            <div id="nameField">
+            </div>
+            <div id="phoneField">
+            </div>
+            <div id="emailField">
+            </div>
+            <div id="urlField">
+            </div>
+            <div id="quoteField">
+            </div>
+        </div>
+
+        <button id="saveButton">Save Design</button>
+    </section>
+
+    <!-- server.js -->
+    <!-- <script src="server.js"></script> -->
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+    <!-- live preview logic -->
+    <script src="./js/generateDesign.js"></script>
+
+    <script src="./js/quoteApi.js"></script>
 </body>
+
+</html>

@@ -1,21 +1,110 @@
-console.log('javascript file linked successfully');
+console.log('Design logic module linked successfully');
 
-const signInButton = document.getElementById('signin');
+// data
 
-// when sign in button is clicked...
+const name = document.getElementById('inputName');
+const phone = document.getElementById('inputPhone');
+const email = document.getElementById('inputEmail');
+const url = document.getElementById('inputURL');
 
-signInButton.addEventListener('click', event => {
+// add info buttons
 
-const crateDesignButton = document.getElementById('createDesign');
-const previewDiv = document.getElementById('previewDiv');
+const addNameButton = document.getElementById('addName');
+const addPhoneButton = document.getElementById('addPhone');
+const addEmailButton = document.getElementById('addEmail');
+const addURLButton = document.getElementById('addURL');
+
+// empty divs for populating data / styles
+
+const cardBackground = document.getElementById('card');
+const nameField = document.getElementById('nameField');
+const phoneField = document.getElementById('phoneField');
+const emailField = document.getElementById('emailField');
+const urlField = document.getElementById('urlField');
+
+//variable to hold default bg color
+let bgcolorClass = 'card-bg-default';
+
+// function that adds what is in the input field to the card area
+
+addToCard = (input, output) => {
+    console.log('you clicked the ' + input.value + ' button');
+    event.preventDefault();
+    output.innerHTML =
+        `
+        <h1> ${input.value} </h1>
+    `;
+};
+
+// event handlers for buttons
+
+addNameButton.addEventListener('click', () => {
+    addToCard(inputName, nameField);
+
 });
-// when sign in button is clicked...
 
-createDesignButton.addEventListener('click', event => {
-    // Pull random template design into previewDiv as bg image
-    // Take information from form input and store it in variables
-    // call that information to dynamically generate html
-    // print html + custom inputs to "preview" div
-
-    // style input using custom CSS to align onto bg image
+addPhoneButton.addEventListener('click', () => {
+    addToCard(inputPhone, phoneField);
 });
+
+addEmailButton.addEventListener('click', () => {
+    addToCard(inputEmail, emailField);
+});
+
+addURLButton.addEventListener('click', () => {
+    addToCard(inputURL, urlField);
+});
+
+// style changes
+
+// change bg-color
+
+changeColor = () => {
+    let color = document.getElementById('selectColor').value;
+    const colorChoices = ['card-gb-default', 'card-bg-white', 'card-bg-black, card-bg-red'];
+    for (let i = 0; i < colorChoices.length; i++) {
+        if (color === 'default') {
+            card.className = 'card-bg-default';
+            bgcolorClass = 'card-bg-default';
+        } else if (color === 'white') {
+            card.className = 'card-bg-white';
+            bgcolorClass = 'card-bg-white';
+        } else if (color === 'black') {
+            card.className = 'card-bg-black';
+            bgcolorClass = 'card-bg-black';
+        } else if (color === 'red') {
+            card.className = 'card-bg-red';
+            bgcolorClass = 'card-bg-red';
+        }
+    }
+
+}
+
+
+//Saving
+const saveButton = document.getElementById('saveButton');
+
+saveButton.addEventListener('click', () => {
+
+    let cardObject = {
+        name: name.value,
+        phone: phone.value,
+        email: email.value,
+        bgcolor: bgcolorClass,
+        quote: $("#quoteField").html(),
+        url: url.value
+    }
+
+    $.post("/api/addDesign", cardObject);
+
+
+});
+
+$("#logout").on("click",(req) => {
+    window.location = "/api/logout";
+});
+
+$("#savedDesign").on("click", (req) =>{
+    window.location = "/savedDesign"
+})
+    

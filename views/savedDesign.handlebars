@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saved Cards</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/cardDesign.css" />
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Silly Biz Cardz</h1>
+                <button type="button" class="signIn" id="newDesign">New Card</button>
+        {{#if userid}}
+        <button type="button" class="signIn" id="logout">Logout</button>
+            {{else}}
+            <button type="button" class="signIn" id="signIn">Sign In</button>
+            {{/if}}
+
+    </div>
+    <br>
+    <div>
+        <div id="cardArea">
+        </div>
+    </div>
+
+</body>
+<script src="./js/savedDesigns.js"></script>
+
+</html>
