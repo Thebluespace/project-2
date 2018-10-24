@@ -211,7 +211,8 @@ h1  {
 .card-bg-default {
 
     background-color: rgb(252, 252, 252);
-
+    width: 600px;
+    height: 250px ;
 
 }
 

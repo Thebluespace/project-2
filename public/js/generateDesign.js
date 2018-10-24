@@ -99,3 +99,12 @@ saveButton.addEventListener('click', () => {
 
 
 });
+
+$("#logout").on("click",(req) => {
+    window.location = "/api/logout";
+});
+
+$("#savedDesign").on("click", (req) =>{
+    window.location = "/savedDesign"
+})
+    
