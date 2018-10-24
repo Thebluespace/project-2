@@ -126,6 +126,5 @@ router.get("/api/quotes", (req, res) => {
   })
 })
 
-
-
+router.get('/favicon.ico', (req, res) => res.status(204));
 module.exports = router;
