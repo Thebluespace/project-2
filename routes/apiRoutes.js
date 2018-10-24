@@ -80,6 +80,20 @@ router.post('/api/addDesign', (req, res) => {
   });
 });
 
+router.get('/savedDesign', isLoggedIn, authController.savedDesign);
+
+// router.get('/api/savedDesign/', (req, res) => {
+//   // console.log("getting user's designs");
+//   db.CardInfo.findAll({
+//     where: {
+//       userId: req.user.id
+//     }
+//   }).then(function (userDesigns) {
+//       // console.log(userDesigns);
+//       res.send(userDesigns);
+//     });
+// })
+
 // Get all designs in database
 router.get("/api/designs", (req, res) => {
   db.CardInfo.findAll({}).then(function (result) {
@@ -89,11 +103,11 @@ router.get("/api/designs", (req, res) => {
 
 // // Get all designs for user
 
-router.get("/api/designs/:id", (req, res) => {
+router.get("/api/designs/currentuser", (req, res) => {
   try {
     var data = db.CardInfo.findAll({
       where: {
-        id: req.params.id
+        userId: req.user.id
       }
     }).then(function (data) {
       res.json(data);
